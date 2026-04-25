@@ -10,12 +10,12 @@ import { getFirestore, Firestore } from 'firebase/firestore';
 // Firebase configuration - hardcoded for static export compatibility
 // These values are safe to expose publicly (they're client-side credentials)
 const firebaseConfig = {
-  apiKey: "AIzaSyCT5ukPxCXfMI3j8PgJCGdF5AvN6RnX0Y8",
-  authDomain: "marcopolo-invoice.firebaseapp.com",
-  projectId: "marcopolo-invoice",
-  storageBucket: "marcopolo-invoice.firebasestorage.app",
-  messagingSenderId: "257585408766",
-  appId: "1:257585408766:web:6309ba28477926e86c796f"
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY || "AIzaSyAuM8kZPTSFIIDk0pWHUN0dgOk56z6SXP0",
+  authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN || "ariana-oriental-rugs.firebaseapp.com",
+  projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID || "ariana-oriental-rugs",
+  storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET || "ariana-oriental-rugs.firebasestorage.app",
+  messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID || "239473809179",
+  appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID || "1:239473809179:web:c9c671d74c55822cf325be"
 };
 
 /**
