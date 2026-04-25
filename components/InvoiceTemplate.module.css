@@ -1,0 +1,423 @@
+/**
+ * INVOICE TEMPLATE STYLES
+ * 
+ * Print-optimized CSS for professional invoice output
+ * Ensures pixel-perfect rendering on screen, print, and PDF
+ */
+
+.invoice {
+  width: 210mm;
+  max-width: 100%;
+  min-height: auto;
+  margin: 0 auto;
+  padding: 10mm;
+  background: white;
+  color: black;
+  font-family: 'Arial', 'Helvetica', sans-serif;
+  font-size: 8.5pt;
+  box-sizing: border-box;
+}
+
+/* Header Section */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #000;
+  padding-bottom: 10px;
+  position: relative;
+}
+
+.businessInfo {
+  flex: 1;
+}
+
+.logoSection {
+  position: relative;
+  margin-left: 20px;
+}
+
+.logoImage {
+  max-width: 120px;
+  max-height: 100px;
+  height: auto;
+  object-fit: contain;
+}
+
+.businessInfo h1 {
+  margin: 0 0 5px 0;
+  font-size: 16pt;
+  font-weight: bold;
+  color: #000;
+}
+
+.businessInfo p {
+  margin: 2px 0;
+  font-size: 8pt;
+  line-height: 1.3;
+}
+
+/* Info Section */
+.infoSection {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  gap: 20px;
+}
+
+.soldTo {
+  flex: 1;
+}
+
+.soldTo h3 {
+  margin: 0 0 5px 0;
+  font-size: 10pt;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.soldTo p {
+  margin: 2px 0;
+  font-size: 9pt;
+  line-height: 1.3;
+}
+
+.customerName {
+  font-weight: bold;
+  font-size: 10pt !important;
+}
+
+.invoiceInfo {
+  flex: 1;
+  border: 2px solid #000;
+  padding: 10px;
+}
+
+.invoiceInfo table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.invoiceInfo td {
+  padding: 3px 0;
+  font-size: 9pt;
+}
+
+.invoiceInfo .label {
+  font-weight: bold;
+  width: 100px;
+  text-align: left;
+}
+
+.invoiceInfo .value {
+  text-align: left;
+  padding-left: 10px;
+}
+
+/* Items Section */
+.itemsSection {
+  margin-bottom: 15px;
+  overflow-x: auto;
+}
+
+.itemsTable {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 8pt;
+}
+
+.itemsTable th {
+  background-color: #f0f0f0;
+  border: 1px solid #000;
+  padding: 4px 3px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 8pt;
+}
+
+.itemsTable .subheader th {
+  background-color: #e0e0e0;
+  font-size: 7pt;
+  padding: 3px;
+}
+
+.itemsTable .smallCol {
+  width: 30px;
+}
+
+.itemsTable td {
+  border: 1px solid #999;
+  padding: 3px 2px;
+  font-size: 8pt;
+}
+
+.itemsTable .description {
+  text-align: left;
+  min-width: 200px;
+}
+
+.itemsTable .shape {
+  text-align: center;
+  font-size: 9pt;
+  width: 50px;
+}
+
+.itemsTable .numeric {
+  text-align: right;
+  white-space: nowrap;
+}
+
+.itemsTable tbody tr:nth-child(even) {
+  background-color: #fafafa;
+}
+
+/* Footer Section */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 30px;
+  gap: 20px;
+  page-break-inside: avoid;
+  align-items: flex-start;
+}
+
+.notesSection {
+  flex: 1;
+}
+
+.notesSection h4 {
+  margin: 0 0 5px 0;
+  font-size: 9pt;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.notesSection p {
+  margin: 3px 0;
+  font-size: 8pt;
+  line-height: 1.4;
+}
+
+.salesTerms {
+  margin-top: 10px;
+  padding: 8px;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.salesTerms h4 {
+  margin: 0 0 5px 0;
+  font-size: 9pt;
+  font-weight: bold;
+  text-decoration: underline;
+  color: #333;
+}
+
+.salesTerms p {
+  margin: 3px 0;
+  font-size: 8pt;
+  line-height: 1.4;
+  color: #000;
+}
+
+.signature {
+  margin-top: 30px;
+}
+
+.signature p {
+  margin: 0;
+  font-size: 8pt;
+}
+
+/* Totals Section */
+.totalsSection {
+  flex: 0 0 240px;
+}
+
+.totalsTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.totalsTable td {
+  padding: 4px 8px;
+  font-size: 9pt;
+}
+
+.totalsTable .totalLabel {
+  text-align: right;
+  font-weight: bold;
+  border-bottom: 1px solid #ddd;
+}
+
+.totalsTable .totalValue {
+  text-align: right;
+  width: 100px;
+  border-bottom: 1px solid #ddd;
+}
+
+.totalsTable .totalDueRow td {
+  border-top: 2px double #000;
+  border-bottom: 2px double #000;
+  padding: 8px;
+  font-size: 11pt;
+  font-weight: bold;
+}
+
+/* Print Styles */
+@media print {
+
+  /* Redundant @page handled by global print.css, but kept for specificity if needed */
+  @page {
+    /* Use auto to respect user's paper selection (Letter/A4) */
+    size: auto;
+    /* Remove browser margins so we control layout via padding in .invoice */
+    margin: 0mm;
+  }
+
+  .invoice {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    /* This padding acts as the page margin */
+    padding: 10mm;
+    box-shadow: none;
+    max-height: none;
+
+    /* Force exact page breaks */
+    page-break-after: always;
+    break-after: page;
+  }
+
+  /* Last page should not force a break to avoid blank sheet at end */
+  .invoice:last-of-type {
+    page-break-after: auto;
+    break-after: auto;
+  }
+
+  /* Prevent content from being cut */
+  .itemsTable {
+    page-break-inside: auto;
+  }
+
+  .itemsTable tr {
+    page-break-inside: avoid;
+    page-break-after: auto;
+  }
+
+  .footer {
+    page-break-inside: avoid;
+  }
+
+  /* Ensure colors print */
+  .itemsTable th {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
+
+/* Signature Section */
+.signatureSection {
+  margin-top: 30px;
+  padding: 20px;
+  border-top: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.signatureLabel {
+  font-size: 10pt;
+  font-weight: bold;
+  color: #333;
+}
+
+.signatureImage {
+  border-bottom: 2px solid #000;
+  padding-bottom: 5px;
+  min-height: 80px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.signatureImage img {
+  max-width: 400px;
+  max-height: 80px;
+  width: auto;
+  height: auto;
+  display: block;
+  /* Ensure it takes space */
+  object-fit: contain;
+}
+
+.signatureDate {
+  font-size: 9pt;
+  color: #666;
+  margin-top: 5px;
+}
+
+/* Screen View Only - Add shadow for better visibility */
+.invoice {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+}
+
+/* Mobile Responsiveness for Viewing (Not for Printing) */
+@media screen and (max-width: 800px) {
+  .invoice {
+    padding: 15px;
+    width: 100%;
+    max-width: 100%;
+    min-height: auto !important;
+    border-radius: 0;
+    box-shadow: none;
+    margin: 0;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+  }
+
+  .businessInfo {
+    width: 100%;
+  }
+
+  .logoSection {
+    margin: 0;
+  }
+
+  .infoSection {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .invoiceInfo {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: 100% !important;
+    box-sizing: border-box;
+  }
+
+  .footer {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .totalsSection {
+    flex: 1;
+    width: 100%;
+  }
+
+  .totalsTable .totalValue {
+    width: auto;
+  }
+
+  .signatureImage img {
+    max-width: 100%;
+  }
+}
