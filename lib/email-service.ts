@@ -18,12 +18,12 @@ export interface EmailConfig {
 }
 
 const DEFAULT_CONFIG: EmailConfig = {
-  serviceId: 'marcopolo2',
-  templateIdInvoice: 'rm8govh',
-  templateIdSignature: 'rm8govh',
+  serviceId: 'service_mliucx9',
+  templateIdInvoice: 'template_124qtkn',
+  templateIdSignature: 'template_124qtkn',
   templateIdConfirm: '',
-  publicKey: 'Anj9zrEUo-VEWvMVw',
-  privateKey: 'ZgV1UYxVUy0UQKBmgj3I5',
+  publicKey: '6C6PK8INxn6VtcHeq',
+  privateKey: 'Oq5Bk0bwMWaPnqDsNHZPe',
 };
 
 // Admin email for security confirmations
